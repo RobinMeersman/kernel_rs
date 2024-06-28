@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2018"
 
 [dependencies]
+
+# disable stack unwinding for both build options
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
